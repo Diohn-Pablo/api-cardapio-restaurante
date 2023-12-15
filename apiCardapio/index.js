@@ -1,8 +1,11 @@
 import express from 'express';
 import { produtosEntrada, buscarPorCategoria, buscarPorTermo } from './servico/servico.js';
+import cors from 'cors'
 
 const app = express();
 
+
+app.use(cors());
 
 
 
@@ -27,6 +30,6 @@ app.get('/produtos/categoria/:categoria', (req,res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(5000, () => {
     console.log('Servidor iniciado')
 })
